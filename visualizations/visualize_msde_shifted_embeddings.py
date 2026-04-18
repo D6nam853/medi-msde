@@ -194,11 +194,11 @@ def main():
     parser.add_argument("--min-dist",    type=float, default=0.1)
 
     # MSDE hyperparams
-    parser.add_argument("--k",                          type=int,   default=20)
-    parser.add_argument("--nbd-sample-count-threshold", type=int,   default=10)
-    parser.add_argument("--learning-rate",              type=float, default=0.1)
-    parser.add_argument("--max-iters-shift",            type=int,   default=5)
-    parser.add_argument("--shift-threshold",            type=float, default=0.003)
+    parser.add_argument("--k",                          type=int,   default=50)
+    parser.add_argument("--nbd-sample-count-threshold", type=int,   default=70)
+    parser.add_argument("--learning-rate",              type=float, default=0.33)
+    parser.add_argument("--max-iters-shift",            type=int,   default=8)
+    parser.add_argument("--shift-threshold",            type=float, default=0.01)
 
     args = parser.parse_args()
 
