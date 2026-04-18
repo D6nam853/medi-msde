@@ -29,11 +29,11 @@ MSDE shifts feature representations toward high-density regions, resulting in:
 
 ##  Key Features
 
-* 🔹 Novel **density-based manifold refinement (MSDE)**
-* 🔹 Works with pretrained models (**no retraining required**)
-* 🔹 Plug-and-play module for anomaly detection pipelines
-* 🔹 Robust performance across multiple medical imaging datasets
-* 🔹 Efficient and scalable (operates on feature embeddings)
+*  Novel **density-based manifold refinement (MSDE)**
+*  Works with pretrained models (**no retraining required**)
+*  Plug-and-play module for anomaly detection pipelines
+*  Robust performance across multiple medical imaging datasets
+*  Efficient and scalable (operates on feature embeddings)
 
 ---
 
