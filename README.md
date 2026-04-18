@@ -8,7 +8,7 @@ Our method enhances latent feature representations through a density-driven mani
 
 ---
 
-##  Overview
+## Overview
 
 Anomaly detection in medical imaging is challenging due to the scarcity of annotated abnormal data. To address this, we propose **MSDE**, a lightweight and effective post-processing module that refines feature embeddings before anomaly scoring.
 
@@ -29,11 +29,11 @@ MSDE shifts feature representations toward high-density regions, resulting in:
 
 ##  Key Features
 
-*  Novel **density-based manifold refinement (MSDE)**
-*  Works with pretrained models (no retraining required)
-*  Plug-and-play module for anomaly detection pipelines
-*  Robust performance across multiple medical imaging datasets
-*  Efficient and scalable (operates on feature embeddings)
+* 🔹 Novel **density-based manifold refinement (MSDE)**
+* 🔹 Works with pretrained models (**no retraining required**)
+* 🔹 Plug-and-play module for anomaly detection pipelines
+* 🔹 Robust performance across multiple medical imaging datasets
+* 🔹 Efficient and scalable (operates on feature embeddings)
 
 ---
 
@@ -47,11 +47,91 @@ We follow the benchmark and evaluation protocol from the **MedIAnomaly** framewo
 
 ---
 
+##  Data Preparation
+
+We follow the dataset preparation protocol from the original **MedIAnomaly** repository.
+
+Please download the preprocessed datasets from:
+ttps://github.com/caiyu6666/MedIAnomaly
+
+Datasets used:
+
+* RSNA Pneumonia
+* VinDr-CXR
+* Brain Tumor
+* LAG
+* ISIC 2018
+* Camelyon16
+* BraTS2021
+
+After downloading, organize the data according to the structure expected by the MedIAnomaly pipeline.
+
+>  We do not redistribute datasets due to licensing restrictions.
+> For detailed setup instructions, please refer to the official MedIAnomaly repository.
+
+---
+
+##  Repository Structure
+
+```
+medi-msde/
+│── README.md
+│── LICENSE
+│
+├── msde/                # MSDE core implementation
+│   └── msde.py
+│
+├── scripts/             # pipeline scripts
+│   ├── extract_features.py
+│   └── run_msde.py
+│
+├── visualizations/      # embedding & MSDE plots
+│   ├── visualize_embeddings.py
+│   └── visualize_msde_shifted_embeddings.py
+```
+
+The repository is organized into modular components, separating feature extraction, MSDE processing, and visualization for clarity and reproducibility.
+
+---
+
+##  Installation
+
+```bash
+git clone https://github.com/D6nam853/medi-msde.git
+cd medi-msde
+pip install -r requirements.txt
+```
+
+---
+
+##  Usage
+
+### Step 1: Extract Features
+
+```bash
+python scripts/extract_features.py
+```
+
+### Step 2: Run MSDE
+
+```bash
+python scripts/run_msde.py
+```
+
+### Step 3: Visualization (Optional)
+
+```bash
+python visualizations/visualize_embeddings.py
+python visualizations/visualize_msde_shifted_embeddings.py
+```
+
+---
+
 ##  Acknowledgements
 
 This work builds upon the excellent **MedIAnomaly benchmark**:
 
-*  Paper: *MedIAnomaly: A comparative study of anomaly detection in medical images* 
+*  Paper: *MedIAnomaly: A comparative study of anomaly detection in medical images*
 *  Code: https://github.com/caiyu6666/MedIAnomaly
 
 We utilize their:
@@ -72,43 +152,6 @@ Compared to the original MedIAnomaly repository, this repo includes:
 * Integration of MSDE into the anomaly detection pipeline
 * Extensive benchmarking with fixed hyperparameters
 * Analysis of latent space refinement for anomaly detection
-
----
-
-##  Repository Structure
-
-```
-medi-msde/
-│── README.md
-│── requirements.txt
-│
-├── msde/              # MSDE core implementation
-├── scripts/           # training / evaluation scripts
-├── configs/           # hyperparameters
-├── plots/             # figures (pipeline, UMAP, etc.)
-```
-
----
-
-##  Installation
-
-```bash
-git clone https://github.com/D6nam853/medi-msde.git
-cd medi-msde
-pip install -r requirements.txt
-```
-
----
-
-##  Usage
-
-Run MSDE on extracted features:
-
-```bash
-python scripts/run_msde.py
-```
-
-*(Modify configs based on dataset and backbone settings)*
 
 ---
 
@@ -138,7 +181,7 @@ MSDE achieves strong and consistent performance across datasets, including:
 
 If you find this work useful, please cite:
 
-```
+```bibtex
 @article{kar2026msde,
   title={Improved Anomaly Detection in Medical Images via Mean Shift Density Enhancement},
   author={Kar, Pritam and others},
@@ -156,5 +199,4 @@ This project is licensed under the MIT License.
 
 ##  Acknowledgment
 
-If you find this repository useful, consider giving it a star ⭐
-
+If you find this repository useful, consider giving it a star 
