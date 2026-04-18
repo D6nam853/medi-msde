@@ -8,22 +8,34 @@ Our method enhances latent feature representations through a density-driven mani
 
 ---
 
-## Overview
+##  Overview
 
 Anomaly detection in medical imaging is challenging due to the scarcity of annotated abnormal data. To address this, we propose **MSDE**, a lightweight and effective post-processing module that refines feature embeddings before anomaly scoring.
 
 The pipeline consists of:
 
-1. **Feature Extraction** using pretrained backbones
-2. **Mean Shift Density Enhancement (MSDE)** for latent space refinement
-3. **Gaussian Density Estimation (GDE)** in PCA-reduced space
-4. **Mahalanobis Distance-based Anomaly Scoring**
+* Feature Extraction using pretrained backbones
+* Mean Shift Density Enhancement (MSDE) for latent space refinement
+* Gaussian Density Estimation (GDE) in PCA-reduced space
+* Mahalanobis Distance-based Anomaly Scoring
 
 MSDE shifts feature representations toward high-density regions, resulting in:
 
 * More compact normal clusters
 * Better separation of anomalies
 * Improved detection performance
+
+---
+
+##  MSDE Pipeline
+
+<p align="center">
+  <img src="plots/msde_pipeline.png" width="100%">
+</p>
+
+<p align="center">
+  <em>Overview of the MSDE pipeline: feature extraction, manifold refinement, density estimation, and anomaly scoring.</em>
+</p>
 
 ---
 
@@ -51,8 +63,7 @@ We follow the benchmark and evaluation protocol from the **MedIAnomaly** framewo
 
 We follow the dataset preparation protocol from the original **MedIAnomaly** repository.
 
-Please download the preprocessed datasets from:
-ttps://github.com/caiyu6666/MedIAnomaly
+https://github.com/caiyu6666/MedIAnomaly
 
 Datasets used:
 
@@ -67,7 +78,7 @@ Datasets used:
 After downloading, organize the data according to the structure expected by the MedIAnomaly pipeline.
 
 >  We do not redistribute datasets due to licensing restrictions.
-> For detailed setup instructions, please refer to the official MedIAnomaly repository.
+> For detailed setup instructions, please refer to the official repository.
 
 ---
 
@@ -88,9 +99,12 @@ medi-msde/
 ├── visualizations/      # embedding & MSDE plots
 │   ├── visualize_embeddings.py
 │   └── visualize_msde_shifted_embeddings.py
+│
+├── plots/               # figures (pipeline & result visualizations)
+│   └── msde_pipeline.png
 ```
 
-The repository is organized into modular components, separating feature extraction, MSDE processing, and visualization for clarity and reproducibility.
+The repository is organized into modular components, separating **feature extraction**, **MSDE processing**, **visualization**, and **result artifacts** for clarity and reproducibility.
 
 ---
 
@@ -131,8 +145,8 @@ python visualizations/visualize_msde_shifted_embeddings.py
 
 This work builds upon the excellent **MedIAnomaly benchmark**:
 
-*  Paper: *MedIAnomaly: A comparative study of anomaly detection in medical images*
-*  Code: https://github.com/caiyu6666/MedIAnomaly
+*  *MedIAnomaly: A comparative study of anomaly detection in medical images*
+*  https://github.com/caiyu6666/MedIAnomaly
 
 We utilize their:
 
@@ -144,7 +158,7 @@ Our work extends this framework by introducing **MSDE** as a latent space refine
 
 ---
 
-##  Our Contributions
+## 🔧 Our Contributions
 
 Compared to the original MedIAnomaly repository, this repo includes:
 
@@ -178,8 +192,6 @@ MSDE achieves strong and consistent performance across datasets, including:
 ---
 
 ##  Citation
-
-If you find this work useful, please cite:
 
 ```bibtex
 @article{kar2026msde,
