@@ -65,7 +65,7 @@ class MSDEWithShift(MSDE):
         )
         self.X_train_shifted_ = X_shifted
 
-        from msde import _GDEScorer
+        from msde.msde import _GDEScorer
         self._gde = _GDEScorer().fit(X_shifted)
         return self
 
