@@ -3,12 +3,10 @@ import argparse
 import json
 import numpy as np
 import pandas as pd
-
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.metrics import roc_auc_score, average_precision_score
-
-from MSDE_v3 import MSDE
+from msde.msde import MSDE
 
 
 def parse_args():
