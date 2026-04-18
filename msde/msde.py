@@ -261,7 +261,7 @@ class MSDE:
     def __init__(
         self,
         seed: int,
-        model_name: str = 'MSML',
+        model_name: str = 'MSDE',
         k: int = 50,
         nbd_sample_count_threshold: int = 70,
         learning_rate: float = 0.33,
