@@ -93,7 +93,7 @@ medi-msde/
 ##  Installation
 
 ```bash
-git clone https://github.com/<your-username>/medi-msde.git
+git clone https://github.com/D6nam853/medi-msde.git
 cd medi-msde
 pip install -r requirements.txt
 ```
