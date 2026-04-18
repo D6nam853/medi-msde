@@ -31,7 +31,7 @@ import matplotlib.patches as mpatches
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
-from msde import MSDE, mean_shift_density_enhancement
+from msde.msde import MSDE, mean_shift_density_enhancement
 
 # ── global style — identical to visualize_embeddings.py ──────────────────────
 plt.rcParams.update({
