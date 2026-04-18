@@ -158,7 +158,7 @@ Our work extends this framework by introducing **MSDE** as a latent space refine
 
 ---
 
-## 🔧 Our Contributions
+##  Our Contributions
 
 Compared to the original MedIAnomaly repository, this repo includes:
 
