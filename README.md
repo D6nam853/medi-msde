@@ -196,8 +196,11 @@ MSDE achieves strong and consistent performance across datasets, including:
 ```bibtex
 @article{kar2026msde,
   title={Improved Anomaly Detection in Medical Images via Mean Shift Density Enhancement},
-  author={Kar, Pritam and others},
-  year={2026}
+  author={Kar, Pritam and Lakshmi, Gouri and Bej, Saptarshi},
+  journal={arXiv preprint arXiv:2604.19191},
+  year={2026},
+  doi={10.48550/arXiv.2604.19191},
+  primaryClass={cs.CV}
 }
 ```
 
