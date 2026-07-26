@@ -30,7 +30,7 @@ MSDE shifts feature representations toward high-density regions, resulting in:
 ##  MSDE Pipeline
 
 <p align="center">
-  <img src="plots/msde_pipeline.png" width="100%">
+  <img src="plots/pipeline.pdf" width="100%">
 </p>
 
 <p align="center">
