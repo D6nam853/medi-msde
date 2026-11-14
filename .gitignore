@@ -1,0 +1,21 @@
+# Generated results and cached embeddings
+results/
+benchmark_results/
+features/
+paper_figures/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter and notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# Generated baseline outputs and checkpoints
+ssl/one_stage/output/
+ssl/two_stage/logdirs/
+ssl/two_stage/models/
+
+# Legacy/archive files not needed by the released pipeline
+old_version_files/
